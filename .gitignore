@@ -1,0 +1,61 @@
+echo # Python Virtual Environment > .gitignore
+echo venv/ >> .gitignore
+echo .env/ >> .gitignore
+echo __pycache__/ >> .gitignore
+echo *.pyc >> .gitignore
+echo *.pyo >> .gitignore
+echo *.pyd >> .gitignore
+
+echo. >> .gitignore
+echo # Machine Learning Models >> .gitignore
+echo models/ >> .gitignore
+echo checkpoints/ >> .gitignore
+echo logs/ >> .gitignore
+echo *.h5 >> .gitignore
+echo *.ckpt >> .gitignore
+echo *.pth >> .gitignore
+echo *.pt >> .gitignore
+echo *.tflite >> .gitignore
+echo *.onnx >> .gitignore
+
+echo. >> .gitignore
+echo # Datasets >> .gitignore
+echo data/ >> .gitignore
+echo dataset/ >> .gitignore
+echo *.csv >> .gitignore
+echo *.json >> .gitignore
+echo *.parquet >> .gitignore
+echo *.sqlite3 >> .gitignore
+
+echo. >> .gitignore
+echo # Node.js/Web Development >> .gitignore
+echo node_modules/ >> .gitignore
+echo build/ >> .gitignore
+echo dist/ >> .gitignore
+echo .next/ >> .gitignore
+echo npm-debug.log >> .gitignore
+echo yarn-error.log >> .gitignore
+
+echo. >> .gitignore
+echo # Logs and Cache >> .gitignore
+echo logs/ >> .gitignore
+echo *.log >> .gitignore
+echo .cache/ >> .gitignore
+echo .pytest_cache/ >> .gitignore
+
+echo. >> .gitignore
+echo # IDE Configs >> .gitignore
+echo .vscode/ >> .gitignore
+echo .idea/ >> .gitignore
+echo .DS_Store >> .gitignore
+
+echo. >> .gitignore
+echo # Git LFS (Large Files) >> .gitignore
+echo *.bin >> .gitignore
+echo *.mp4 >> .gitignore
+echo *.mp3 >> .gitignore
+echo *.zip >> .gitignore
+echo *.tar.gz >> .gitignore
+echo *.pdf >> .gitignore
+echo *.jpg >> .gitignore
+echo *.png >> .gitignore
