@@ -1,17 +1,21 @@
 import { ClientOptions } from "@anthropic-ai/sdk";
 import { LogLine } from "../../types/log";
-import { AnthropicTransformedResponse, AvailableModel } from "../../types/model";
+import { AvailableModel } from "../../types/model";
 import { LLMCache } from "../cache/LLMCache";
-import { ChatCompletionOptions, LLMClient } from "./LLMClient";
+import { CreateChatCompletionOptions, LLMClient, LLMResponse } from "./LLMClient";
 export declare class AnthropicClient extends LLMClient {
     type: "anthropic";
     private client;
     private cache;
-    logger: (message: LogLine) => void;
     private enableCaching;
     clientOptions: ClientOptions;
-    constructor(logger: (message: LogLine) => void, enableCaching: boolean, cache: LLMCache | undefined, modelName: AvailableModel, clientOptions?: ClientOptions);
-    createChatCompletion<T = AnthropicTransformedResponse>(options: ChatCompletionOptions & {
-        retries?: number;
-    }): Promise<T>;
+    constructor({ enableCaching, cache, modelName, clientOptions, userProvidedInstructions, }: {
+        logger: (message: LogLine) => void;
+        enableCaching?: boolean;
+        cache?: LLMCache;
+        modelName: AvailableModel;
+        clientOptions?: ClientOptions;
+        userProvidedInstructions?: string;
+    });
+    createChatCompletion<T = LLMResponse>({ options, retries, logger, }: CreateChatCompletionOptions): Promise<T>;
 }
